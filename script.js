@@ -21,6 +21,18 @@ GOOD LUCK 😀
 const Car = function (make, speed) {
   this.make = make;
   this.speed = speed;
+
+  // THE BEST METHOD IS TO USE PROTOTYPE:
+  // accelerate = function () {
+  //   this.speed += 10;
+  // };
 };
 
+// 2. Implement an 'accelerate' method that will increase the car's speed by 10, and log the new speed to the console;
 
+Car.prototype.accelerate = function () {
+  console.log((this.speed += 10));
+};
+
+const BMW = new Car("BMW", 120);
+BMW.accelerate();
