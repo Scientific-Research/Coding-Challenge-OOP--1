@@ -15,3 +15,12 @@ DATA CAR 2: 'Mercedes' going at 95 km/h
 GOOD LUCK 😀
 
 */
+
+// 1. Use a constructor function to implement a Car. A car has a make and a speed property. The speed property is the current speed of the car in km/h;
+
+const Car = function (make, speed) {
+  this.make = make;
+  this.speed = speed;
+};
+
+
