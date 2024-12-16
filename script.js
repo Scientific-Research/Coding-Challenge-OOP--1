@@ -31,16 +31,23 @@ const Car = function (make, speed) {
 // 2. Implement an 'accelerate' method that will increase the car's speed by 10, and log the new speed to the console;
 
 Car.prototype.accelerate = function () {
-  console.log((this.speed += 10)); // 130
+  console.log((this.speed += 10));
 };
-
-const BMW = new Car("BMW", 120);
-BMW.accelerate();
 
 // 3. Implement a 'brake' method that will decrease the car's speed by 5, and log the new speed to the console;
 
 Car.prototype.break = function () {
-  console.log((this.speed -= 5)); // 125
+  console.log((this.speed -= 5));
 };
 
-BMW.break();
+// 4. Create 2 car objects and expriment with calling 'accelerate' and 'brake' multiple times on each of them.
+
+console.log("-------------BMW------------------");
+const BMW = new Car("BMW", 120);
+BMW.accelerate(); // 130
+BMW.break(); // 125
+
+console.log("-------------Mercedes-------------");
+const Mercedes = new Car("Mercedes", 95);
+Mercedes.accelerate(); // 105
+Mercedes.break(); // 100
